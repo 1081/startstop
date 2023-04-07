@@ -13,6 +13,9 @@ requires-python = ">=3.7"
 
 dependencies = ["pyinstrument"]
 
+[project.urls]
+homepage = "https://github.com/1081/startstop"
+
 [tool.hatch.version]
 path = "startstop/__about__.py"
 
