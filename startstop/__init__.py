@@ -14,6 +14,7 @@ class StartStopProfiler:
             self.profiler.stop()
             self.running = False
             self.profiler.open_in_browser()
+            self.profiler.reset()
 
 
 t = StartStopProfiler()
