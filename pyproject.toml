@@ -3,7 +3,7 @@ build-backend = "hatchling.build"
 requires = ["hatchling"]
 
 [project]
-description = ''
+description = 'Start and stop a python profiler'
 dynamic = ["version"]
 keywords = ["profiler", "simple"]
 license = "MIT"
