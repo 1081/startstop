@@ -3,12 +3,12 @@ from time import perf_counter
 
 
 class StartStopProfiler:
-    def __init__(self, interval=0.001, async_mode="enabled"):
-        self.profiler = Profiler(interval, async_mode)
+    def __init__(self):
         self.running = False
 
-    def __call__(self):
+    def __call__(self, interval=0.001, async_mode="enabled"):
         if not self.running:
+            self.profiler = Profiler(interval, async_mode)
             self.profiler.start()
             self.running = True
         else:

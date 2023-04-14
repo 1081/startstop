@@ -6,8 +6,36 @@ def your_code():
         i**2
 
 
+# Simple timer
+t()
+your_code()
+t()
+
+
+# Simple timer with label and precision config
+t(label="your label", precision=2)
+your_code()
+t()
+
+
+# Simple timer as contex manager
+with tc():
+    your_code()
+
+
+# Simple timer as contex manager label and precision config
+with tc(label="your label", precision=2):
+    your_code()
+
+
 # Profiler
 p()
+your_code()
+p()
+
+
+# Profiler with config
+p(interval=0.01, async_mode="enabled")
 your_code()
 p()
 
@@ -20,29 +48,3 @@ with pc():
 # Profiler as contex manager with config
 with pc(interval=0.002, async_mode="enabled"):
     your_code()
-
-
-# Simple timer
-t()
-your_code()
-t()
-# ... TIMER: 0.024 sec
-
-
-# Simple timer with label and precision config
-t(label="your label", precision=2)
-your_code()
-t()
-# ... TIMER your label: 0.02 sec
-
-
-# Simple timer as contex manager
-with tc():
-    your_code()
-# ... TIMER: 0.024 sec
-
-
-# Simple timer as contex manager label and precision config
-with tc(label="your label", precision=2):
-    your_code()
-# ... TIMER your label: 0.02 sec
