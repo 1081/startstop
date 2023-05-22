@@ -58,6 +58,8 @@ class StartStopTimer:
 
             print(f"TIMER{text}: {self.end - self.start :.{self.precision}f} sec")
 
+            return round(self.end - self.start, precision)
+
 
 t = StartStopTimer()
 
@@ -79,9 +81,6 @@ class StartStopTimerContext:
             text = ""
 
         print(f"TIMER{text}: {self.end - self.start :.{self.precision}f} sec")
-        
-        return round(self.end - self.start, precision)
-        
 
 
 tc = StartStopTimerContext
